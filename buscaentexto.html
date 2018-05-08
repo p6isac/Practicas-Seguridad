@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+	<html lang='es'>
+		<head>
+			<meta charset='utf-8'>
+			<title>Palabras repetidas</title>
+		</head>
+		<body>
+		
+			<form method="POST" action="otro.php">
+				<h1>Escribe una palabrita:</h1>
+				<input type="text" id='palabrita' name="palabritaa"></br></br>
+				<h1>Escribe un texto:</h1>
+				<textarea id="texto" rows="20" cols="50">
+				</textarea>
+				<button onclick="repetidas()">Checar</button>
+			</form>
+		</body>
+		
+		<script type="text/javascript">
+		
+			function repetidas(){
+			
+				var palabrita=document.getElementById("palabrita").value;
+				alert("Palabrita:"+palabrita);
+				var texto=document.getElementById("texto").value;
+				
+				var patt=new RegExp(palabrita);
+				var resp=patt.test(texto);
+				var ctext=texto.split(" ");
+				var cantidad=[];
+				
+				if(resp==true){
+				
+				
+					alert("Si hay concidencias");
+					
+						
+						for(var i in ctext){
+
+							if(ctext[i]==palabrita)
+							{
+										
+							cantidad[cantidad.length]=ctext[i];
+							
+							}
+						
+						}
+						var npalabra=(cantidad.length)+1;
+						
+						alert("En el texto se repite la palabra:"+npalabra+" veces");
+						
+		
+				
+				}else{
+				
+					alert("No hay concidencia");
+				
+				}
+			
+			}	
+		
+		
+		</script>
+		
+	</html>	
