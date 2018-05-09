@@ -3,34 +3,57 @@
 		<head>
 			<meta charset="utf-8">
 			<title>Práctica 6</title>
+
+	
 		</head>
 		
 		<body>
 			<h1>Mini Cuestionario</h1>
-			<form method="POST" action="vcurp.php">
+			<form  id="formu" method="POST" action="vcurp.php" >
 				<label>Escribe tu nombre:</label><br/>
-				<input type="text" name="nombre"/><br/>
+				<input type="text" id="Nombre" name="nombre" /><br/>
+			
+             	<br/>
 				<label>Apellido Paterno:</label><br/>
-				<input type="text" name="appt" /><br/>
-				<label>Apellido Materno</label><br/>
-				<input type="text" name="apmt"/><br/>
-				<label>Número de cuenta</label><br/>
-				<input type="text" name="cuenta"/><br/>
-				<label>Contraseña:(mínimo 9 caracteres, con mayúsculas y minúsculas, un número y un carácter especial)</label><br/>
-				<input type="text" name="contra" /><br/>
+				<input type="text" id="apP" name="appt"/><br/>
+				
+             	<br/>
+				<label>Apellido Materno:</label><br/>
+				<input type="text" id="apM" name="apmt"/><br/>
+			
+             	<br/>
+				<label>Número de cuenta:</label><br/>
+				<input type="text" id="cuen" name="cuenta" /><br/>
+			
+             	<br/>	
+				<label>Contraseña:(mínimo 9 caracteres, con mayúsculas y minúsculas, digitos y carácter especial)</label><br/>
+				<input type="text" id="con" name="contra"/><br/>
+				
+             	<br/>
 				<label>Teléfono celular:</label><br/>
-				<input type="text" name="cel" placeholder="10 digitos" /><br/>
+				<input type="text" id="tel" placeholder="10 digitos" name="cel"/><br/>
+			 	
+             	<br/>
 				<label>Email:</label><br/>
-				<input type="text" name="email" placeholder="gmail o comunidad unam"><br/>
+				<input type="text" id="correo" placeholder="gmail o comunidad unam" name="email"><br/>
+			 	
+             	<br/>	
 				<label>CURP:</label><br/>
-				<input type="text" name="curp"/><br/>
-				<input type="submit" value="CHECAR" >
-				<!---<button onclick="comprobar()">CHECAR</button>-->
+				<input type="text" id="cur" name="curp"/><br/>
+				
+             	<br/>
+				<input type="submit" value="PHP"/>
+				<button id="boton">JS</button>
+
+
 
 			</form>	
 
 		</body>
+		
 
+		<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="valcurp.js"></script>
 
 	</html>
 			
